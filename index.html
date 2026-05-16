@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宛亦郑 - 个人主页</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.8;
+  }
+  header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+  }
+  header .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    border: 4px solid rgba(255,255,255,0.4);
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  section h2 {
+    font-size: 1.4em;
+    color: #667eea;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f0f0f0;
+    position: relative;
+  }
+  section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  .info-item .icon { font-size: 1.2em; }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .skill-tag {
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    background: #f0f0f0;
+    color: #555;
+    transition: all 0.2s;
+  }
+  .skill-tag:hover {
+    background: #667eea;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .skill-tag.highlight {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+  }
+  .project-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s;
+  }
+  .project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .project-card h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .project-card p {
+    color: #666;
+    font-size: 0.95em;
+  }
+  .project-card .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    background: #e8f0fe;
+    color: #667eea;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+  .apply-section {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+  }
+  .apply-section h2 {
+    color: #fff;
+    border-bottom-color: rgba(255,255,255,0.2);
+  }
+  .apply-section h2::after {
+    background: #fff;
+  }
+  .apply-content { opacity: 0.95; }
+  .btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #fff;
+    color: #667eea;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 16px;
+    transition: transform 0.2s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    color: #999;
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.8em; }
+    header { padding: 50px 20px; }
+    .info-grid { grid-template-columns: 1fr; }
+    section { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="avatar">✧</div>
+  <h1>宛亦郑</h1>
+  <p>计算机与通信工程学院 · 心路实践团程序开发组候选人</p>
+</header>
+
+<div class="container">
+
+  <!-- 基本信息 -->
+  <section>
+    <h2>基本信息</h2>
+    <div class="info-grid">
+      <div class="info-item"><span class="icon">🎓</span> 计算机与通信工程学院</div>
+      <div class="info-item"><span class="icon">💻</span> 程序开发组（第一志愿）</div>
+      <div class="info-item"><span class="icon">🌟</span> 编程爱好者 · 持续学习中</div>
+      <div class="info-item"><span class="icon">📚</span> 乐于接受新事物</div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section>
+    <h2>技能方向</h2>
+    <p style="color:#666;margin-bottom:8px;">正在学习和积累中的技术栈</p>
+    <div class="skill-tags">
+      <span class="skill-tag highlight">HTML & CSS</span>
+      <span class="skill-tag highlight">JavaScript</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Web 开发</span>
+      <span class="skill-tag">小程序开发（学习中）</span>
+      <span class="skill-tag">团队协作</span>
+    </div>
+  </section>
+
+  <!-- 个人作品 -->
+  <section>
+    <h2>个人作品</h2>
+    <div class="project-card">
+      <h3>✦ 个人主页 · 作品展示站</h3>
+      <p>使用原生 HTML + CSS 构建的个人响应式主页，采用 flex/grid 布局、渐变色设计、自适应适配移动端。这是我在前端开发方向的第一个实践作品，从设计到编码独立完成。</p>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">响应式设计</span>
+    </div>
+  </section>
+
+  <!-- 报名材料 -->
+  <section class="apply-section">
+    <h2>心路实践团 · 报名申请</h2>
+    <div class="apply-content">
+      <p><strong>个人简介：</strong></p>
+      <p>我是宛亦郑，来自计算机与通信工程学院。虽然目前没有突出的特长和项目经验，但我对编程和技术开发有着浓厚的兴趣，具备扎实的专业基础知识和较强的学习能力。我性格踏实认真，乐于接受新事物，希望能够加入心路实践团，将所学应用于实践，在团队中不断成长。</p>
+      <br>
+      <p><strong>报名理由：</strong></p>
+      <p>心路实践团十七年如一日的坚守让我深受触动，尤其是程序开发组用技术赋能公益的理念与我高度契合。我希望借助这次实践机会，将专业所学转化为服务社会的实际行动，在开发网页和小程序的过程中锻炼编程能力，同时也为留守儿童和务工子女贡献自己的一份力量。</p>
+      <br>
+      <p><strong>对报名组别工作的认识：</strong></p>
+      <p>程序开发组是心路实践团的技术核心，主要负责团队网页设计、小程序开发及维护，为实践活动的宣传和开展提供技术支持。心路已自主开发了"心路-用心陪伴"小程序和盲人阅读眼镜等成果，这让我认识到程序开发不仅是写代码，更是用科技创新解决实际问题的过程。</p>
+      <a class="btn" href="#" onclick="alert('感谢关注！期待加入心路实践团 🙌')">加入心路 →</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 宛亦郑 · 为心路实践团程序开发组而作</p>
+</footer>
+
+<script>
+  // 页面加载动画
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'all 0.6s ease';
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 100 * (i + 1));
+    });
+  });
+</script>
+
+</body>
+</html>
